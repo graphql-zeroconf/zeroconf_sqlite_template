@@ -1,0 +1,58 @@
+{
+  "name": "zeroconf_postgres_template",
+  "version": "1.0.0",
+  "description": "The simplest way to start graphql with zero configuration ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run graphql",
+    "graphql": "model_generator && babel-node index.graphql",
+    "apollo": "model_generator && babel-node index.apollo",
+    "debug": "babel-node --inspect index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/graphql-zeroconf/zeroconf_postgres_template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "acl": "^0.4.11",
+    "apollo-cache-inmemory": "^1.5.1",
+    "apollo-client": "^2.5.1",
+    "apollo-link-error": "^1.1.10",
+    "apollo-link-http": "^1.5.14",
+    "apollo-link-ws": "^1.0.17",
+    "apollo-server": "^2.4.8",
+    "app-root-path": "^2.1.0",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "fs-readdir-recursive": "^1.1.0",
+    "gql-generator": "^1.0.7",
+    "graphql": "^14.2.1",
+    "graphql-tools": "^4.0.4",
+    "jsonwebtoken": "^8.4.0",
+    "pg": "^6.4.2",
+    "pg-hstore": "^2.3.2",
+    "lodash": "^4.17.11",
+    "sqlite3": "^4.0.6",
+    "sequelize": "^4.42.0",
+    "write-json-file": "^3.1.0",
+    "zeroconf_model_generator": "git+https://github.com/graphql-zeroconf/zeroconf_model_generator.git",
+    "zeroconf": "git+https://github.com/graphql-zeroconf/zeroconf.git"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@babel/preset-es2016": "^7.0.0-beta.53",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-graphql": "^3.0.1",
+    "eslint-plugin-import": "^2.14.0"
+  }
+}
