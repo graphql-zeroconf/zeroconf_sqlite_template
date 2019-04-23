@@ -35,7 +35,7 @@ const initServer = async () => {
     host: process.env.GRAPHQL_HOST,
     port: process.env.GRAPHQL_PORT,
   });
-  console.log(`Server ready at ${url}`);
+  console.log(`Server ready at ${url}/graphql`);
 };
 
 initServer();
