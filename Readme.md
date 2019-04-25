@@ -35,7 +35,7 @@ $ npm start
 or
 
 ```
-$ npm start graphql
+$ npm run graphql
 ```
 
 ### Start with apollo

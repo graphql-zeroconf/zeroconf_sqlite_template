@@ -4,7 +4,7 @@ const task = () => async (file) => {
   } = await file;
   const stream = await createReadStream();
 
-  // todo your custom(like aws upload & save to database)
+  // todo your custom(like aws upload & save to the database)
 
   return {
     filename,

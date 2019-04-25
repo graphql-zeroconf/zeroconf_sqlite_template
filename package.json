@@ -38,7 +38,7 @@
     "pg-hstore": "^2.3.2",
     "lodash": "^4.17.11",
     "sqlite3": "^4.0.6",
-    "sequelize": "^4.42.0",
+    "sequelize": "^5.7.5",
     "write-json-file": "^3.1.0",
     "zeroconf_model_generator": "git+https://github.com/graphql-zeroconf/zeroconf_model_generator.git",
     "zeroconf": "git+https://github.com/graphql-zeroconf/zeroconf.git"
