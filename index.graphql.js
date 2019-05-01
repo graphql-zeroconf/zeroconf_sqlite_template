@@ -1,7 +1,8 @@
 import fs from 'fs';
 import express from 'express';
 import graphqlHTTP from 'express-graphql';
-import { ZeroConf, ACL } from 'zeroconf';
+import { ZeroConf } from 'zeroconf';
+import ZeroConfUpload from 'zeroconf_upload';
 import appRoot from 'app-root-path';
 import { makeExecutableSchema } from 'graphql-tools';
 
@@ -26,6 +27,8 @@ const initServer = async () => {
     },
   });
 
+  zeroConf.use(ZeroConfUpload);
+
   await zeroConf.configuration();
 
   const { typeDefs, resolvers } = zeroConf;
@@ -41,11 +44,15 @@ const initServer = async () => {
   const app = express();
   app.use(
     '/graphql',
-    graphqlHTTP({
-      schema,
-      ...zeroConf,
+    graphqlHTTP(async (...args) => {
+      return {
+        schema,
+        ...zeroConf,
+        context: await zeroConf.context(args)
+      }
     }),
   );
+
   app.listen(process.env.GRAPHQL_PORT, process.env.GRAPHQL_HOST, () => {
     const url = `http://${process.env.GRAPHQL_HOST}:${process.env.GRAPHQL_PORT}`;
     console.log(`Server ready at ${url}/graphql`);

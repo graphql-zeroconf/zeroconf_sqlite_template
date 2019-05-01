@@ -34,14 +34,15 @@
     "graphql": "^14.2.1",
     "graphql-tools": "^4.0.4",
     "jsonwebtoken": "^8.4.0",
+    "lodash": "^4.17.11",
     "pg": "^6.4.2",
     "pg-hstore": "^2.3.2",
-    "lodash": "^4.17.11",
-    "sqlite3": "^4.0.6",
     "sequelize": "^5.7.5",
+    "sqlite3": "^4.0.6",
     "write-json-file": "^3.1.0",
+    "zeroconf": "git+https://github.com/graphql-zeroconf/zeroconf.git",
     "zeroconf_model_generator": "git+https://github.com/graphql-zeroconf/zeroconf_model_generator.git",
-    "zeroconf": "git+https://github.com/graphql-zeroconf/zeroconf.git"
+    "zeroconf_upload": "git+https://github.com/graphql-zeroconf/zeroconf_upload.git"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
